@@ -1,0 +1,12 @@
+:host{     
+    --rating-bar-excellent: #238738;
+    --rating-bar-great: #67AB04;
+    --rating-bar-average: #D99B22;
+    --rating-bar-poor: #D97322;
+    --rating-bar-bad: #D9222A;
+    --track-color:  #E1E6ED;
+    --font-family: san-serif;
+    --font-size: 1rem;    
+    --font-weight: 100
+    --font-color: #000000;
+}
