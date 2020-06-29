@@ -79,6 +79,6 @@ To use the element:
 
   
 ### Snapshot
-![Rating Bar Component](../rating.PNG)
+![Rating Bar Component](../rating-component/src/rating.PNG)
 
 ### Reference Material
