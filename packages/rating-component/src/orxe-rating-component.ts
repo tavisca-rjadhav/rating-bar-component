@@ -9,7 +9,7 @@ export default class OrxeRatingComponent extends LitElement {
   rating = 0;
 
   @property({ type: String, reflect: true })
-  label = 'Rating';
+  label = '';
   private actualRating = 0;
   private _showProgress(): Record<string, string> {
     const progress = {};
