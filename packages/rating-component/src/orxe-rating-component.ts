@@ -33,6 +33,18 @@ export default class OrxeRatingComponent extends LitElement {
           ? 0
           : Math.floor(this.rating) / 10;
   }
+
+  private _getClass() {
+    return {
+      'linear-bar__indicator': true,
+      'linear-bar--bad': this.actualRating >= 1 && this.actualRating < 3,
+      'linear-bar--poor': this.actualRating >= 3 && this.actualRating < 5,
+      'linear-bar--average': this.actualRating >= 5 && this.actualRating < 7,
+      'linear-bar--great': this.actualRating >= 7 && this.actualRating < 8.5,
+      'linear-bar--excellent': this.actualRating >= 8.5
+    }
+  }
+
   /**
    * Implement `render` to define a template for button element.
    */
@@ -43,14 +55,7 @@ export default class OrxeRatingComponent extends LitElement {
                   <div id="linearBar" 
                   aria-label="${this.actualRating} out of 10" 
                   style=${styleMap(this._showProgress())}
-                  class="${classMap({
-      'linear-bar__indicator': true,
-      'linear-bar--bad': this.actualRating >= 1 && this.actualRating < 3,
-      'linear-bar--poor': this.actualRating >= 3 && this.actualRating < 5,
-      'linear-bar--average': this.actualRating >= 5 && this.actualRating < 7,
-      'linear-bar--great': this.actualRating >= 7 && this.actualRating < 8.5,
-      'linear-bar--excellent': this.actualRating >= 8.5
-    })}"></div>                  
+                  class="${classMap(this._getClass())}"></div>                  
         </div>
         <div class= "content">
           <span class="label"> ${ this.label} </span>
